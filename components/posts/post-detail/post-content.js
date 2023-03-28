@@ -2,6 +2,7 @@ import React from 'react';
 import { DUMMY_POSTS } from '../../../pages';
 import PostHeader from './post-header';
 import styles from './post-content.module.scss';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 export default function PostContent() {
   const POST = DUMMY_POSTS[0];
@@ -12,7 +13,7 @@ export default function PostContent() {
   return (
     <article className={styles.content}>
       <PostHeader title={POST.title} image={imagePath} />
-      {POST.content}
+      <ReactMarkdown>{POST.content}</ReactMarkdown>
     </article>
   );
 }
