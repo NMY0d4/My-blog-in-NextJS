@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import PostContent from '../../components/posts/post-detail/post-content';
 
 export default function PostDetailPage() {
-  return <div>PostDetailPage</div>;
+  return (
+    <Fragment>
+      <PostContent />
+    </Fragment>
+  );
 }
